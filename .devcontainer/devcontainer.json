@@ -1,0 +1,15 @@
+{
+  "name": "Python Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "extensions": [
+    "ms-python.python",
+    "ms-azuretools.vscode-docker"
+  ],
+  "settings": {
+    "python.pythonPath": "/opt/conda/envs/myenv/bin/python"
+  },
+  "postCreateCommand": "conda activate myenv && <your_start_command_here>",
+  "forwardPorts": [8000]
+}
