@@ -3,13 +3,18 @@
   "build": {
     "dockerfile": "../Dockerfile"
   },
-  "extensions": [
-    "ms-python.python",
-    "ms-azuretools.vscode-docker"
-  ],
-  "settings": {
-    "python.pythonPath": "/opt/conda/envs/myenv/bin/python"
+  "customizations": {
+      "vscode": {
+          "settings": {
+              "python.defaultInterpreterPath": "/opt/conda/envs/myenv/bin/python",
+              "jupyter.notebookFileRoot": "${workspaceFolder}"
+          },
+          "extensions": [
+              "ms-python.python",
+              "ms-toolsai.jupyter"
+          ]
+      }
   },
-  "postCreateCommand": "conda activate myenv && <your_start_command_here>",
+  "postCreateCommand": "conda activate myenv",
   "forwardPorts": [8000]
 }

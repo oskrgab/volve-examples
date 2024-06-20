@@ -1,2 +1,17 @@
 image:
     file: Dockerfile
+
+command:
+      # Ensure the environment is activated
+      conda activate myenv
+
+vscode:
+  extensions:
+    - ms-python.python
+    - ms-toolsai.jupyter
+  settings:
+    python.defaultInterpreterPath: "/opt/conda/envs/myenv/bin/python"
+    jupyter.notebookFileRoot: "${workspaceFolder}"
+
+ports:
+  - port: 8000
