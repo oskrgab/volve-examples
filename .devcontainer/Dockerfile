@@ -5,7 +5,7 @@ FROM continuumio/miniconda3:24.4.0-0
 WORKDIR /workspace
 
 # Copy the environment.yml file into the container
-COPY environment.yml .
+COPY ../environment.yml .
 
 # Create the conda environment
 RUN conda env create -f environment.yml
