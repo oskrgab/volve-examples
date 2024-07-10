@@ -1,4 +1,3 @@
-#%%
 import pandas as pd
 from datetime import datetime
 
@@ -55,14 +54,3 @@ def parse_well_survey(file_path):
         'kb_msl': kb_msl,
         'survey': survey_df
     }
-#%%
-# Example usage
-file_paths = [
-    "data/well_dev/Volve F_159-19_19 A_19 A_ACTUAL",
-    "data/well_dev/Volve F_159-19_19 BT2_19 BT2_ACTUAL"
-]
-
-parsed_data_1 = parse_well_survey(file_paths[0])
-parsed_data_2 = parse_well_survey(file_paths[1])
-
-# %%
